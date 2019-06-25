@@ -1,35 +1,184 @@
 <html>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet"	type="text/css"	href="styles.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet"	type="text/css"	href="styles.css">
+    <body>
+    <!-- banners -->
+        <div id="villageBanner" class = "w3-container banner"></div>    
+        
+        <div id = "mageBanner" style = "display:none" class = "w3-container mageBanner"></div>
+
+        <div id = "knightBanner" style =" display:none" class = "w3-container knightBanner"></div>
+
+        <div id = "gryphonFightBanner" style = " display:none" class = "w3-container gryphonFightBanner"></div>
+
+        <div id = "gryphonSleepBanner" style = "display:none" class = "w3-container gryphonSleepBanner"></div>
+
+        <div id = "gryphonSpottedBanner" style = "display:none" class = "w3-container gryphonFlyingBanner"></div>
+
+        <div id = "handInBanner" style = "display:none" class = "w3-container handInBanner"></div>
+
+        <div id = "dragonBanner" style = "display:none" class = "w3-container dragonBanner"></div>
+        
+    <!-- Headers -->
+        <h1 id = "villageHeader">Your story begins here...</h1>
+        <h1 id ="gryphonSpottedHeader" style="display:none">The gryphon is spotted...</h1>
+        <h1 id ="handInHeader" style="display:none">The bards will sing a new tale...</h1>
+        <h1 id ="mageHeader" style="display:none">You're a wizard Harry....</h1>
+        <h1 id ="knightHeader" style="display:none">A knights tale...</h1>
+        <h1 id ="gryphonFightHeader" style="display:none">Feathers abound...</h1>
+        <h1 id ="dragonHeader" style="display:none">Boy, it's hot...</h1>
+
+    <!-- Player Status Bar -->
+        <div id = "playerContainer" style="display:none" class = "w3-container">
+            <div class="row">
+                <div id = "playerImage" style = "display:none" img src="images/knightPortrait" class="playerImage"></div>
+                <div id = "playerStats" style = "display:none" class="playerStats">
+                    <p> List stats here </p>
                 
-    <div class = "w3-container banner">
-    </div>
-    <h1>Your story begins here...</h1>
+                </div>
 
-    <body class="bannerSpace">
-        <div class = "w3-container">
-            <p> You are at home enjoying yourself in your small home in the kingdom when your mother slaps a bag of silver coins into your hand and sends you to go to the market. 
-                She gives you a list of ingredients and tells you that you may spend any extra money on something for the family. She literally shoves you out the door. 
-                Reluctantly, you head down to the market.
-            </p>
-            <p> As you are walking to the market, you are approached by the head general of the king's army. He stops you and begins to speak.<br> "Boy, your balance and footwork is that of a 
-                natural swordsmen. I wish to make you one of my knights. You and your family will be raised in rank and given a manor and titles. Do you take it?"<br>
-                "I'll have to think about it" you answer.<br> "You can find me in the kings courtyard anytime boy, ask for general Grevious." He says as he turns and leaves.
-            </p>
-            <p> You have used a sword before and got a basic
-                education on fighting with your father before he died adventuring, but you don't remember being particularly good.<br> You watch him for a few minutes before you remember what you came
-                out to do. You continue down to the market. You buy everything your mother requested and a small necklace for her.<br> On your way home, you hear an unfamiliar voice call out your name
-                behind you.<br> "May I ... help you?" you ask, wondering what the hell is going on today.<br> "I have been sent" she says, "to request that you come to learn magic."<br> You are shocked,
-                knowing that mages are terribly powerful but extremely rare in the kingdom. <br> "The magic has chosen you and wants you as its user. If you pass all the tests, you will be a grand mage."
-                She turns to face the woods just outside of your town. "If you choose to answer the calling, go out there; the magic will guide you."<br> She turns to face you before disappearing with
-                a twist of her cloak.
-            </p>
-            <p> Dumbfounded with the events that occured today, you begin to head home, all the while debating which you would rather be: a knight, or a mage. Which do you choose?
-            </p>
+            </div>    
         </div>
-    </body>
 
-    <div class = "left"><a href="knight.html" class="button buttonBlue">I feel more agile all of a sudden, strength coursing through me.</a></div>
-    <div class= "right"><a href="mage.html" class="button buttonGreen">I feel magic coursing through my veins and it's drawing me towards the woods!</a></div>
+    <!-- Action Bar -->
+        <div id="actionBar" style="display:none; width:100%" class="actionButtons">
+            <button style = "width:33.3%">Attack</button>
+            <button style = "width:33.3%">Defend</button>
+            <button style = "width:33.3%">Evade</button>    
+        </div>
+
+    <!-- Body content/combat log -->
+        <div id="villageBody">
+            <div class = "w3-container">
+                <p> You are at home enjoying yourself in your small home in the kingdom when your mother slaps a bag of silver coins into your hand and sends you to go to the market. 
+                    She gives you a list of ingredients and tells you that you may spend any extra money on something for the family. She literally shoves you out the door. 
+                    Reluctantly, you head down to the market.
+                </p>
+                <p> As you are walking to the market, you are approached by the head general of the king's army. He stops you and begins to speak.<br> "Boy, your balance and footwork is that of a 
+                    natural swordsmen. I wish to make you one of my knights. You and your family will be raised in rank and given a manor and titles. Do you take it?"<br>
+                    "I'll have to think about it" you answer.<br> "You can find me in the kings courtyard anytime boy, ask for general Grevious." He says as he turns and leaves.
+                </p>
+                <p> You have used a sword before and got a basic
+                    education on fighting with your father before he died adventuring, but you don't remember being particularly good.<br> You watch him for a few minutes before you remember what you came
+                    out to do. You continue down to the market. You buy everything your mother requested and a small necklace for her.<br> On your way home, you hear an unfamiliar voice call out your name
+                    behind you.<br> "May I ... help you?" you ask, wondering what the hell is going on today.<br> "I have been sent" she says, "to request that you come to learn magic."<br> You are shocked,
+                    knowing that mages are terribly powerful but extremely rare in the kingdom. <br> "The magic has chosen you and wants you as its user. If you pass all the tests, you will be a grand mage."
+                    She turns to face the woods just outside of your town. "If you choose to answer the calling, go out there; the magic will guide you."<br> She turns to face you before disappearing with
+                    a twist of her cloak.
+                </p>
+                <p> Dumbfounded with the events that occured today, you begin to head home, all the while debating which you would rather be: a knight, or a mage. Which do you choose?
+                </p>
+            </div>
+        </div>
+
+        <!-- Knight -->
+            <div id = "knightBody" style = "display:none">
+                <div class = "w3-container">
+                    <p> You choose to be a knight. You head down to the castle. Upon reach the castle, you are stopped by a guard who asks your business here. You tell him you were told to meet general Grevious
+                            in the courtyard. Th guard tells you to stay there while her confirms your story.
+                    </p>
+                    <p> A few minutes later, he is back to bring you to general Grevious. "Boy, you made a wise choice. I will work you hard but you will learn the code of being a knight. We start now."
+                    </p>
+                    <p> A few years later, you have completed your training. But before you can be knighted you have to undertake a mission to better the kingdom. You've heard tales of a mighty Gryphon terrorizng a village
+                            near the kingdom's border. You deciede that will be your testament of strength, doesn't hurt that you think a gryphon cloak would look rather dashing.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mage -->
+                <div id = "mageBody" style = "display:none">
+                    <div class = "w3-container">
+                        <p> You choose to follow the voice that seems to be calling you from the woods. You head towards the woods, you head deeper and deeper until you no longer recognize where you are. Which is odd as you
+                                have played in these woods your whole life. All of a sudden as you crest a hill you see a tower. As you stare at it you notice that a hood man has appeared out of nowhere. 
+                        </p>
+                        <p> "You've come at last" says the man "I've been waiting for you but I knew you would come, it has been foretold afterall" He cackles as his hand makes a gesture. Everything blursand the next thing you know you are standing
+                                in what appears to be a library. The hooded man gestures to the books, "Welcome to my library, in here you'll find knowledge on every single subject known to man. This will be your training. 
+                                We begin training now!"
+                        </p>
+                        <p> A few years later, you have completed your training. But before you can earn your wizard's robes to graduate from being a novice, you have to undertake a task. To utilize everything you have learned,
+                                you've heard rumors that a gryphon has been terrorizing a village near the border of the kingdom. You deciede that gryphon feathers would be a nice addition to your robes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Gryphon Spotted -->
+                    <div id="gryphonSpotted" style = "display:none">
+                        <div class = "w3-container">
+                            <p> You go to where the gryphon was last spotted. You can't find it but see the destruction it has caused these last few weeks. You hear a screech in the air. You look up, in the sky you see
+                                    the gryphon soaring in the sky. 
+                            </p>
+                            <p> You've never seen a gryphon before. This creature has the body, tail and back legs of a lion, the head and wings of an eagle. With each flap of its wings you can feel the power of this creature from here
+                                    you wonder how in the hell you're going to slay this beast. You wonder where the gryphon is going and what's it doing out in the open. You have two options of what you could do.
+                            </p>
+                        </div>
+                    </div>
+
+                <!-- Gryphon Fight -->
+                    <div id="gryphonFight" style = "display:none">
+                        <div class = "w3-container">
+                            <p> You charge the gryphon, taking it by surprise for only a moment before it meets you.
+                            </p>
+                            <p> FIGHT FUNCTION/LOG?</p>
+                        </div>
+                    </div>
+
+                <!-- Gryphn Track -->
+                    <div id = "gryphonWait" style="display:none">
+                        <div class = "w3-container">
+                            <p> You track the gryphon back to its nest and wait for it to sleep, you slowly make your way and enter it's nest. You take it by surprise!
+                            </p>
+                            <p> FIGHT FUNCTION/LOG?</p>
+                        </div>
+                    </div>
+                    
+                <!-- Turn in -->
+                    <div id="turnInBody" style="display:none">
+                        <div class = "w3-container">
+                            <p> As you make your way to the kingdom's capital to claim you reward and to notify everyone that the gryphon shall no longer be a problem, you are shocked to see the kingdom already celebrating your deeds.
+                                Your mentor was following you the whole time to ensure that you accomplished your task and wanting to celebrate with you notified the kingdom ahead of time. You enter the capital as a hero.
+                            </p>
+                            <p> After a fortnite's worth of festivities and feasts you are ready to head back home and visit the village in which you grew up in. As you are about to leave, you are stopped by the king. He looks at you
+                                clearly distressed. "Young hero, your deeds have helped the kingdom tremendously and we all thank you for that", he hesistates as he continues "However, while you were taking care of the gryphon we have been
+                                plagued by a red dragon. All of my finest knights and mages have gone to take care of the issue, however none of returned. I ask you to take care of this dragon, if you are able to slay the dragon, we will
+                                bestow upon you a royal title and we will betroth the princess to you." 
+                
+                            </p>
+                        </div>
+                    </div>
+
+                <!-- Dragon -->
+                <div id="dragonBody" style ="display:none">
+                    <div class = "w3-container">
+                        <p> As you head towards where the dragon was last seen, you see the destruction that the dragon was caused. The dragon has been ravaging the countryside, every burnt down village you see, determination steels 
+                                your heart. You know that if you don't slay the dragon, this is only the beginning, the dragon will eventually burn the entire kingdom down. You continue to track it down into the mountain ranges, eventually
+                                you discover the dragon. You're startled at its size at first but then you think about what you've seen. Anger clouds your better judgement and you charge in!
+                        </p>
+                        <p> FIGHT FUNCTION/LOG?</p>
+                    </div>
+                </div>
+
+
+    <!-- Enemy Status Bar
+    <div id = "enemyContainer" style="display:none" class = "w3-container">
+            <div class="row">
+                <div id = "enemyImage" style = "display:none" img src="images/gryphonPortrait"></div>
+                <div id = "enemyStats" style = "display:none">
+                    <p> List stats here </p>
+                
+                </div>
+
+            </div>    
+        </div> -->
+
+    <!-- Progress buttons -->
+
+        <div class = "left"><a onclick = "chooseClass('knight')" href="knight.html" class="button buttonBlue">I feel more agile all of a sudden, strength coursing through me.</a></div>
+        <div class= "right"><a onclick = "chooseClass('wizard')" href="mage.html" class="button buttonGreen">I feel magic coursing through my veins and it's drawing me towards the woods!</a></div>
+
+
+    </body>
+    <!-- Javascript Source -->
+        <script src = "diceGame.js" type="text/javascript"></script>
 </html>
+

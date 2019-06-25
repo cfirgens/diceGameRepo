@@ -1,54 +1,47 @@
 
-runGame()
 
-function runGame(){
-    let userClass = "";
-    let selectedAbility;
 
-    document.write("Lore.... click below to roll hp")
+// function runGame(){
+    // let userClass = "";
+    // let selectedAbility;
+
+    // // document.write("Lore.... click below to roll hp")
     
-    userClass = chooseClass(); 
+    // userClass = chooseClass(); 
 
-    let playerHP = getPlayerHP(userClass);
-    // let playerAttack = getPlayerAttack(userClass);
-    let playerDefense = getPlayerDefense(userClass);
-    let playerEvade = getPlayerEvade(userClass);
+    // let playerHP = getPlayerHP(userClass);
+    // let playerDefense = getPlayerDefense(userClass);
+    // let playerEvade = getPlayerEvade(userClass);
+    // let player ={
+    //     health: 50,
+    //     defense: 30,
+    //     evade: 20
+    // }
+    // player.health -= 30;
+    // document.write(playerHP);
+
+    // document.write("You fight the mighty griffon");
+
+    // fightGriffon(userClass);
+
+    // document.write(playerHP);
+
+    // document.write("Lore... save the prince and defeat the red dragon!")
+
+    // fightdragon(userClass);
+// }
 
 
-    document.write(playerHP);
-
-    document.write("You fight the mighty griffon");
-
-    fightGriffon(userClass);
-
-    document.write(playerHP);
-
-    document.write("Lore... save the prince and defeat the red wizard!")
-
-    fightWizard();
-
-}
-
-
-    function chooseClass(){
-        let classLore;
-        let userClassPrompt = prompt("As a child what were you more inclined towards? Wrestling with the other children or reading books under the oak tree that overlooks the village?");
+    function chooseClass(profession){
         let selectedClass = "";
-        switch(userClassPrompt) {
-            case "Wrestling":
-                classLore= "You were the best of the best, no other child your age could pin you and your unique understanding of using leverage served you well when you went through training to become a knight!";
+        switch(profession) {
+            case "knight":
                 selectedClass = "knight";
                      break;
-            case "Reading":
-                classLore= "You read every book your small village had to offer, whenever a peddler came you would do everything you could to get more reading material, one time you stumbled upon a wizards old spellbook, you practiced the fireball spell until you became profecieint becoming an acolyte of the kingdoms wizard tower.";
+            case "wizard":
                 selectedClass = "wizard"         
                      break;
-            default:
-                classLore="You were like every other child, a jack of all trades yet a master of none.";
-                selectedClass = "peasant"; 
-                     break;
         }
-        document.write(classLore);
         return selectedClass;
     }
 
@@ -129,7 +122,7 @@ function runGame(){
 
             case "Evade":
                 selectedAbility = "Evade";
-                // selectedAbility = playerEvade + document.write('You attempt to evade against the next attack against you');
+                // selectedAbility = playerEvade + document.write('You attempt to evade against the next attack against you and recover some hp');
                     break;
             default:
                 selectedAbility = "Fear";
@@ -212,16 +205,16 @@ function runGame(){
             }
 
 
-    function fightWizard(){
+    function fightDragon(){
         let critMultiplier = 1.5;
         let playerCrit = 0;
-        let wizardHP = 30;
+        let dragonHP = 30;
         let playerCritDmg = playerAttack*1.5;
-            while (wizardHP>0){
-                let wizardAttack = rollDie(10);
+            while (dragonHP>0){
+                let dragonAttack = rollDie(10);
 
                     if (playerHP < 0){
-                        document.write("The wizard has killed you and you have failed yourself, the princess and the kingdom")
+                        document.write("The dragon has killed you and you have failed yourself, the princess and the kingdom")
                             break;
                     }
 
@@ -231,42 +224,42 @@ function runGame(){
                         playerCrit = rollDie(100);
                         if (playerCrit>80){
                             document.write("You have critically hit!")
-                            wizardHP= wizardHP - playerCritDmg;
-                            playerHP = playerHP - wizardAttack;
+                            dragonHP= dragonHP - playerCritDmg;
+                            playerHP = playerHP - dragonAttack;
 
                         }
                         else{
-                            wizardHP = (wizardHP - playerAttack);
-                            playerHP = (playerHP - wizardAttack);
+                            dragonHP = (dragonHP - playerAttack);
+                            playerHP = (playerHP - dragonAttack);
                         }
                     }
                     else if (selectedAbility === "Defend"){
-                        playerHP = playerHP - (wizardAttack - playerDefense);
+                        playerHP = playerHP - (dragonAttack - playerDefense);
                     }
                     else if (selectedAbility === "Evade"){
                         playerEvade= rollDie(70)+playerEvade;
                         if (playerEvade>80){
                             
-                            document.write("You have evaded the wizards fireball attack!");
+                            document.write("You have evaded the dragons fireball attack!");
                         }
                         else{
                             document.write("You tripped over a rock, and recieved a critical blow");
-                            playerHP = playerHP - (wizardAttack*1.5);
+                            playerHP = playerHP - (dragonAttack*1.5);
                         }
                     }
                     else if(selectedAbility === "Fear"){
                         document.write("You froze in fear and took double damage.");
-                        playerHP= playerHP - (wizardAttack*2);
+                        playerHP= playerHP - (dragonAttack*2);
                         }
 
-                playerHP =(playerHP - wizardAttack);
-                wizardHP=(wizardHP - playerAttack);
+                playerHP =(playerHP - dragonAttack);
+                dragonHP=(dragonHP - playerAttack);
                 
-                document.write('The wizards hp is:' + wizardHP);
+                document.write('The dragons hp is:' + dragonHP);
                 document.write('Your hp is:' + playerHP);
                     
             }
-        document.write('You have defeated the mighty wizard. Finding the princess in the dungeon you unshackle her and bring her back to her rightful place in the castle, you have completed your quest!');
+        document.write('You have defeated the mighty dragon. You have completed your quest!');
         return playerHP;
 
     }
