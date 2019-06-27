@@ -1,13 +1,11 @@
 
 
 
-// function runGame(){
-    // let userClass = "";
-    // let selectedAbility;
-
-    // // document.write("Lore.... click below to roll hp")
+function runGame(){
+    let userClass = "";
+    let selectedAbility;
     
-    // userClass = chooseClass(); 
+    userClass = chooseClass(); 
 
     // let playerHP = getPlayerHP(userClass);
     // let playerDefense = getPlayerDefense(userClass);
@@ -17,17 +15,9 @@
     //     defense: 30,
     //     evade: 20
     // }
-    // player.health -= 30;
-    // document.write(playerHP);
 
-    // document.write("You fight the mighty griffon");
 
     // fightGriffon(userClass);
-
-    // document.write(playerHP);
-
-    // document.write("Lore... save the prince and defeat the red dragon!")
-
     // fightdragon(userClass);
 // }
 
@@ -136,7 +126,7 @@
         return total;
     }
 
-    function fightGriffon(userClass){
+    function fightGryphon(userClass){
         let critMultiplier = 1.5;
         let playerCrit = 0;
         let griffonHP = 20;
@@ -263,3 +253,96 @@
         return playerHP;
 
     }
+
+    // document.getElementById(' ').style.display="none";
+    // document.getElementById(' ').style.display="";
+
+
+
+function getKnight(){
+    document.getElementById('villageBanner').style.display="none";
+    document.getElementById('villageHeader').style.display="none";
+    document.getElementById('villageBody').style.display="none";
+    document.getElementById('villageButtons').style.display="none";
+    document.getElementById('knightBanner').style.display="";
+    document.getElementById('knightHeader').style.display="";
+    document.getElementById('knightBody').style.display="";
+    document.getElementById('knightButton').style.display="";
+
+}
+
+function getMage(){
+    document.getElementById('villageBanner').style.display="none";
+    document.getElementById('villageHeader').style.display="none";
+    document.getElementById('villageBody').style.display="none";
+    document.getElementById('villageButtons').style.display="none";
+    document.getElementById('mageBanner').style.display="";
+    document.getElementById('mageHeader').style.display="";
+    document.getElementById('mageBody').style.display="";
+    document.getElementById('knightButton').style.display="";
+}
+
+function getGryphonSpotted(){
+    document.getElementById('knightBanner').style.display="none";
+    document.getElementById('mageBanner').style.display="none";
+    document.getElementById('mageHeader').style.display="none";
+    document.getElementById('mageBody').style.display="none";
+    document.getElementById('knightButton').style.display="none";
+    document.getElementById('knightBanner').style.display="none";
+    document.getElementById('knightHeader').style.display="none";
+    document.getElementById('knightBody').style.display="none";
+    document.getElementById('knightButton').style.display="none";
+    document.getElementById('gryphonSpottedBanner').style.display="";
+    document.getElementById('gryphonSpottedHeader').style.display="";
+    document.getElementById('gryphonSpottedBody').style.display="";
+    document.getElementById('gryphonSpottedButtons').style.display="";
+}
+
+function getGryphonWaitFight(){
+    document.getElementById('gryphonSpottedBanner').style.display="none";
+    document.getElementById('gryphonSpottedHeader').style.display="none";
+    document.getElementById('gryphonSpottedBody').style.display="none";
+    document.getElementById('gryphonSpottedButtons').style.display="none";
+    document.getElementById('gryphonSleepBanner').style.display="";
+    document.getElementById('gryphonFightHeader').style.display="";
+    document.getElementById('gryphonWaitBody').style.display="";
+    document.getElementById('gryphonProgressButton').style.display="";
+}
+
+function getGryphonFight(){
+    document.getElementById('gryphonSpottedBanner').style.display="none";
+    document.getElementById('gryphonSpottedHeader').style.display="none";
+    document.getElementById('gryphonSpottedBody').style.display="none";
+    document.getElementById('gryphonSpottedButtons').style.display="none";
+    document.getElementById('gryphonFightBanner').style.display="";
+    document.getElementById('gryphonFightHeader').style.display="";
+    document.getElementById('gryphonFightBody').style.display="";
+    document.getElementById('gryphonProgressButton').style.display="";
+}
+
+function getTurnIn(){
+    document.getElementById('handInBanner').style.display="";
+    document.getElementById('handInHeader').style.display="";
+    document.getElementById('turnInBody').style.display="";
+    document.getElementById('handInButton').style.display="";
+    document.getElementById('gryphonFightBanner').style.display="none";
+    document.getElementById('gryphonFightHeader').style.display="none";
+    document.getElementById('gryphonFightBody').style.display="none";
+    document.getElementById('gryphonProgressButton').style.display="none";
+    document.getElementById('gryphonSleepBanner').style.display="none";
+    document.getElementById('gryphonFightHeader').style.display="none";
+    document.getElementById('gryphonWaitBody').style.display="none";
+    document.getElementById('gryphonProgressButton').style.display="none";
+
+
+}
+function getDragonFight(){
+    document.getElementById('handInBanner').style.display="none";
+    document.getElementById('handInHeader').style.display="none";
+    document.getElementById('turnInBody').style.display="none";
+    document.getElementById('handInButton').style.display="none";
+    document.getElementById('dragonBanner').style.display="";
+    document.getElementById('dragonHeader').style.display="";
+    document.getElementById('dragonBody').style.display="";
+    document.getElementById('dragonButton').style.display="";
+}

@@ -103,7 +103,7 @@
                 </div>
 
                 <!-- Gryphon Spotted -->
-                    <div id="gryphonSpotted" style = "display:none">
+                    <div id="gryphonSpottedBody" style = "display:none">
                         <div class = "w3-container">
                             <p> You go to where the gryphon was last spotted. You can't find it but see the destruction it has caused these last few weeks. You hear a screech in the air. You look up, in the sky you see
                                     the gryphon soaring in the sky. 
@@ -115,7 +115,7 @@
                     </div>
 
                 <!-- Gryphon Fight -->
-                    <div id="gryphonFight" style = "display:none">
+                    <div id="gryphonFightBody" style = "display:none">
                         <div class = "w3-container">
                             <p> You charge the gryphon, taking it by surprise for only a moment before it meets you.
                             </p>
@@ -124,7 +124,7 @@
                     </div>
 
                 <!-- Gryphn Track -->
-                    <div id = "gryphonWait" style="display:none">
+                    <div id = "gryphonWaitBody" style="display:none">
                         <div class = "w3-container">
                             <p> You track the gryphon back to its nest and wait for it to sleep, you slowly make your way and enter it's nest. You take it by surprise!
                             </p>
@@ -170,13 +170,30 @@
 
             </div>    
         </div> -->
-
+<br>
     <!-- Progress buttons -->
+        <!-- Village progress -->
+            <div id = villageButtons>
+                <div class = "left"><a onclick = "chooseClass('knight');getKnight()" class="button buttonBlue">I feel more agile all of a sudden, strength coursing through me.</a></div>
+                <div class= "right"><a onclick = "chooseClass('wizard');getMage()" class="button buttonGreen">I feel magic coursing through my veins and it's drawing me towards the woods!</a></div>
+            </div>
+        <!-- Knight & Mage progress -->
+            <div id = "knightButton" style="display:none"><a onclick="getGryphonSpotted()" class="button buttonBlue center">To slay the Gryphon!</a></div>
 
-        <div class = "left"><a onclick = "chooseClass('knight')" href="knight.html" class="button buttonBlue">I feel more agile all of a sudden, strength coursing through me.</a></div>
-        <div class= "right"><a onclick = "chooseClass('wizard')" href="mage.html" class="button buttonGreen">I feel magic coursing through my veins and it's drawing me towards the woods!</a></div>
+        <!-- Gryphon Spotted -->
+            <div id= "gryphonSpottedButtons" style="display:none">
+                <div id ="gryphonFightButton" class = "left"><a onclick="getGryphonFight()" class="button buttonBlue">The gryphon could be hunting right now!Attack now!</a></div>
+                <div id = "gryphonWaitButton" class= "right"><a onclick="getGryphonWaitFight()" class="button buttonGreen">You know a gryphon is no easy beast to kill, lets track it to its nest.</a></div>
+            </div>
+        <!-- Gryphon Progress -->
+            <div id = "gryphonProgressButton" style="display:none"><a onclick="getTurnIn()" class="button buttonBlue center">Hand in your new trophy</a></div>
 
+        <!-- Hand in progress -->
+            <div id = "handInButton" style="display:none"><a onclick="getDragonFight()"  class="button buttonBlue center">Time to slay a dragon</a></div>
+        <!-- Dragon -->
+            <div id = "dragonButton" style = "display:none"><a href="ending.html" class="button buttonBlue center">Return to the castle</a></div>
 
+        <br><br>
     </body>
     <!-- Javascript Source -->
         <script src = "diceGame.js" type="text/javascript"></script>
